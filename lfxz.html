@@ -279,21 +279,22 @@
 		</div>
 	</body>
 	<script>
-	  document.addEventListener("DOMContentLoaded", function () {
-	    showNextImage();
-	  });
-	
-	  // 获取菜单图标和菜单的引用
-	  var menuIcon = document.querySelector(".menu-icon");
-	  var menu = document.querySelector(".menu");
-	
-	  // 点击事件处理程序
-	  menuIcon.addEventListener("click", function() {
-	    // 切换菜单栏的显示状态
-	    if (menu.style.left === "-100%") {
-	      menu.style.left = "0";
-	    } else {
-	      menu.style.left = "-100%";
-	    }
-	  });
+		  document.addEventListener("DOMContentLoaded", function () {
+		    showNextImage();
+		  });
+		
+		  // 获取菜单图标和菜单的引用
+		  var menuIcon = document.querySelector(".menu-icon");
+		  var menu = document.querySelector(".menu");
+		
+		  // 点击事件处理程序
+		  menuIcon.addEventListener("click", function() {
+		    // 切换菜单栏的显示状态
+		    if (menu.style.left === "-100%") {
+		      menu.style.left = "0";
+		    } else {
+		      menu.style.left = "-100%";
+		    }
+		  });
+	</script>
 </html>
