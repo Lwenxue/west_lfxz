@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>雷峰夕照</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,7 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
 		.menu {
 		  width: 25%;
 		  height: 100vh;
@@ -51,7 +53,7 @@
 		  position: fixed;
 		  top: 0;
 		  left: -100%;
-		  transition: left 0.3s;
+		  transition: left 0.1s;
 		  z-index: 999;
 		  opacity: 0.9;
 		}
@@ -104,7 +106,7 @@
 			padding: 5px 10px;
 		}
 		.lfxz h2{
-			text-align:center;
+			text-align: center;
 		}
 		.lft{
 			width: 25%;
@@ -136,6 +138,37 @@
 			float: left;
 			margin-left: 10px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #999a99;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #999a99;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 		<div class="container">
@@ -156,7 +189,7 @@
 			</ul>
 		</div>
 		<div class="lfxz">
-			<h2>雷峰夕照</h2>			
+			<h2>雷峰夕照</h2>
 			<h3>传说</h3>
 			<p>雷峰塔既倒，西湖水未干</p>
 			<p>雷峰塔雷峰塔之所以远近闻名，与民间传说《白蛇传》有很大的关系。相传，法海和尚曾将白娘子镇压在塔下，并咒语:'若要雷峰塔倒，除非西湖
@@ -279,25 +312,41 @@
 			砾之场。</p>
 			<p>余欲筑室于此，以为东坡先生专祠，往鬻其地，而主人不肯。但林木俱无，苔藓尽剥。"奔云"一石，亦残缺失次，十去其五。数年之后，必鞠为茂
 			草，荡为冷烟矣。菊水桃源，付之一想。</p>
+			<div class="pagination">
+			    <a href="https://lwenxue.github.io/west_npwz/npwz.html" class="prev">
+					<!-- 上一页按钮 -->
+				  <button class="button" onclick="goToPreviousPage()">
+					<i class="arrow fas fa-chevron-left"></i>
+					上一页
+				  </button>
+				</a>
+			    <a href="https://lwenxue.github.io/west_llwy/llwy.html" class="next">
+					<!-- 下一页按钮 -->
+					<button class="button" onclick="goToNextPage()">
+										下一页
+										<i class="arrow fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
 		</div>
 	</body>
 	<script>
-		  document.addEventListener("DOMContentLoaded", function () {
-		    showNextImage();
-		  });
-		
-		  // 获取菜单图标和菜单的引用
-		  var menuIcon = document.querySelector(".menu-icon");
-		  var menu = document.querySelector(".menu");
-		
-		  // 点击事件处理程序
-		  menuIcon.addEventListener("click", function() {
-		    // 切换菜单栏的显示状态
-		    if (menu.style.left === "-100%") {
-		      menu.style.left = "0";
-		    } else {
-		      menu.style.left = "-100%";
-		    }
-		  });
+	  document.addEventListener("DOMContentLoaded", function () {
+	    showNextImage();
+	  });
+	
+	  // 获取菜单图标和菜单的引用
+	  var menuIcon = document.querySelector(".menu-icon");
+	  var menu = document.querySelector(".menu");
+	
+	  // 点击事件处理程序
+	  menuIcon.addEventListener("click", function() {
+	    // 切换菜单栏的显示状态
+	    if (menu.style.left === "-100%") {
+	      menu.style.left = "0";
+	    } else {
+	      menu.style.left = "-100%";
+	    }
+	  });
 	</script>
 </html>
